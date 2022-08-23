@@ -1,0 +1,399 @@
+.op {
+  background: url(../images/bg_home.jpg) center no-repeat;
+  background-size: cover;
+  height:calc(100vh - 90px);
+  @include mobile {
+    background: url(../images/bg_home_mobile.jpg) center no-repeat;
+    background-size: cover;
+    height:336px;
+  }
+  .title-block {
+    padding: 50px 85px;
+    border: 1px solid white;
+    background: $dark;
+    position: relative;
+    &::before,&::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+    }
+    &::before {
+      top: -5px;
+      left: -5px;
+    }
+    &::after {
+      top: -5px;
+      right: -5px;
+    }
+
+    h1 {  
+      .title-gradient {
+        background: linear-gradient(to bottom, $secondary, $primary);
+        background: -webkit-linear-gradient(to bottom, $secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; 
+      }
+      &::before,&::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+      }
+      &::before {
+        bottom: -5px;
+        left: -5px;
+      }
+      &::after {
+        bottom: -5px;
+        right: -5px;
+      }
+      .s-tittle {
+        font-size: 18px;
+      }
+    }
+
+    @include mobile { 
+      padding: 32px 28px;
+      .s-tittle {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.index-s2 {
+  .opacity-5 {
+    opacity: .5;
+    padding: 48px 0;
+    transition:.3s;
+    border: 1px solid transparent;
+    .material-icons {
+      font-size: 48px;
+    }
+    &:hover {
+      opacity: 1;
+      transition:.3s;
+      border: 1px solid $primary;
+      background: $black;
+      span {
+        background: linear-gradient(to bottom, $secondary, $primary);
+        background: -webkit-linear-gradient(to bottom, $secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; 
+      }
+    }
+    @include mobile {
+      opacity: 1;
+      padding:0 12px;
+      span {
+        background: linear-gradient(to bottom, $secondary, $primary);
+        background: -webkit-linear-gradient(to bottom, $secondary, $primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; 
+      }
+      .material-icons {
+        font-size: 40px;
+      }
+      .index-s2-card {
+        background: #000;
+        padding: 50px 0;
+        margin-bottom: 24px;
+        border-radius: 14px;
+      }
+      &:nth-last-child(1) {
+        .index-s2-card {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.index-s3 {
+  .s3-block {
+    position: relative;
+    .font-monospace {
+      position: absolute;
+      left: 46px;
+      top: -38px;
+      color:$primary;
+      display:inline;
+      background: $body-bg;
+      font-size: 48px;
+    }
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.index-s4 {
+  ul {
+    overflow: hidden;
+    @include mobile {
+      overflow:auto;
+    }
+  }
+}
+
+.index-s5 {
+  .s5-block {
+    min-height: 457px;
+    border: 1px solid $info;
+    transition: .3s;
+    &:hover {
+      border: 1px solid $primary;
+      transition: .3s;
+    }
+    img {
+      width: 100px;
+    }
+    @include mobile {
+      min-height: auto;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.index-s6 {
+  .s6-block {
+    padding:216px 50px;
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $dark;
+      opacity: .9;
+      z-index: -1;
+    }
+    &:nth-child(1){
+      background: url(../images/info01.jpg) center no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(2){
+      background: url(../images/info02.jpg) center no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(3){
+      background: url(../images/info03.jpg) center no-repeat;
+      background-size: cover;
+    }
+    &:nth-child(4){
+      background: url(../images/info04.jpg) center no-repeat;
+      background-size: cover;
+    }
+
+    .s6-text {
+      color:$gray-600;
+      transition: .3s;
+      h4 {
+        color:$white;
+      }
+      .material-icons {
+        font-size: 28px;
+        margin-bottom: 18px;
+      }
+    }
+
+    &:hover {
+      transition: .3s;
+      &::before {
+        opacity: .6;
+      }
+      .s6-text {
+        color:$white;
+        .material-icons {
+          color:$primary;
+        }
+        .h4-line {
+          background-color:$primary;
+        }
+      }
+    }
+    @include mobile {
+      padding:40px;
+      .s6-text {
+        text-align:center;
+        color:$white;
+        .material-icons {
+          color:$primary;
+        }
+      }
+    }
+  }
+}
+
+.index-s7 {
+  .s7-block,.s7-card  {
+    &:hover {
+      position: relative;
+      &::after,&::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        border:solid $primary;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        border-width: 1px 0 0 1px;
+        border-top-left-radius: 0.75rem;
+      }
+      &::after {
+        bottom: 0;
+        left: 0;
+        border-width: 0 0 1px 1px;
+        border-bottom-left-radius: 0.75rem;
+      } 
+    }
+
+    .s7-card {
+      &::before {
+        top: -32px;
+        right: -32px;
+        left: auto;
+        border-width: 1px 1px 0 0;
+        border-top-right-radius: 0.75rem;
+      }
+      &::after {
+        bottom: -32px;
+        right: -32px;
+        left: auto;
+        border-width: 0 1px 1px 0;
+        border-bottom-right-radius: 0.75rem;
+      } 
+    } 
+  }
+}
+
+.index-s8 {
+  background: url(../images/bg_share.jpg) center no-repeat;
+  background-size: cover;
+  .carousel-inner {
+    padding-bottom: 50px;
+  }
+  .carousel-item {
+    
+    .slider-left {
+      width: 60%;
+      position: relative;
+      img {
+        border-radius:24px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        position: relative;
+        z-index: 1;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        border-radius: 24px;
+        border: 1px solid $gray-500;
+        bottom:0px;
+        left: 0px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+      }
+      @include mobile {
+          width: 100%;
+      }
+    }
+
+    .slider-right {
+      position:absolute;
+      right: 0;
+      bottom: -32px;
+      width: 45%;
+      border-radius: 24px 24px 24px 0;
+      z-index: 2;
+      img {
+        width: 100px;
+        position:absolute;
+        right: 32px;
+        top: -50px;
+      }
+      @include mobile {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+        img {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  .carousel-indicators {
+    right: auto;
+    margin-bottom: 0px;
+    @include mobile {
+      margin-bottom: -30px;
+      right: 0;
+    }
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: $primary;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    margin: 0 10px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    top: auto;
+    @include mobile {
+      bottom:-30px;
+    }
+  }
+  .carousel-control-next {
+    right: auto;
+    left: 244px;
+    @include mobile {
+      right: 0;
+      left: auto;
+    }
+  }
+  .carousel-control-prev-icon {
+    background-image: url(../images/arrow_back.png);
+  }
+  .carousel-control-next-icon {
+    background-image: url(../images/arrow_forward.png);
+  }
+}
+
+.index-s9 {
+  background-color: $black;
+  .s9-block {
+    padding: 48px;
+    .s9-text {
+      .material-icons {
+        font-size: 80px;
+        margin-right: 48px;
+        color: $gray-600;
+        @include mobile {
+          margin-right: 0;
+          font-size: 100px;
+        }
+      }
+    }
+    @include mobile {
+      padding: 40px 24px;
+    }
+  }
+}
